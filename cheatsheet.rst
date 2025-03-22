@@ -219,8 +219,6 @@ If you want to use dynamic variables in scripts, you can use the `replaceIn` sta
 
     pm.variables.replaceIn('{{$randomFirstName}}'); // returns a String
 
-For more details please see the section dedicated to :doc:`Dynamic variables </dynamic-variables>`
-
 Logging /  Debugging variables
 -----------------------------
 
