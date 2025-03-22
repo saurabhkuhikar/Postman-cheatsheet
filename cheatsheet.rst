@@ -110,6 +110,8 @@ Environment variables are tied to the selected environment. Good alternative to 
 
 **Getting**
 
+.. code-block:: javascript
+
     pm.environment.get('myVariable');
 
 Depending on the closest scope:
@@ -219,7 +221,7 @@ If you want to use dynamic variables in scripts, you can use the `replaceIn` sta
 
 For more details please see the section dedicated to :doc:`Dynamic variables </dynamic-variables>`
 
-Logging / Debugging variables
+Logging /  Debugging variables
 -----------------------------
 
 Open Postman Console and use `console.log` in your test or pre-request script.
