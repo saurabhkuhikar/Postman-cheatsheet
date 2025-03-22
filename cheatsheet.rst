@@ -142,7 +142,7 @@ Remove ALL environment variables
     console.log(pm.environment.get('name'));
     console.log(pm.variables.get('name'));
 
-**Detecting the environment name**
+**Detecting  the environment name**
 
 If you need to know inside scripts which environment is currently active (locahost, production, ...) you can use the name property: ::
 
@@ -226,7 +226,7 @@ Open Postman Console and use `console.log` in your test or pre-request script.
 
 Example:
 
-.. code-block:: json
+.. code-block:: javascript
 
     var myVar = pm.globals.get("myVar");
     console.log(myVar);
@@ -238,7 +238,7 @@ Note: You need to add any of the assertions inside a ``pm.test`` callback.
 
 Example:
 
-.. code-block:: json
+.. code-block:: javascript
 
     pm.test("Your test name", function () {
         var jsonData = pm.response.json();
