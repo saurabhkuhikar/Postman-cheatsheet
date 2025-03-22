@@ -38,21 +38,29 @@ Please consider using one of the more specialized variables below. Delete variab
 
     pm.globals.set('myVariable', MY_VALUE);
 
-**Getting** ::
+**Getting**
+
+.. code-block:: javascript
 
     pm.globals.get('myVariable');
 
-Alternatively, depending on the scope: ::
+Alternatively, depending on the scope:
+
+.. code-block:: javascript
 
     pm.variables.get('myVariable');
 
 **Removing**
 
-Remove one variable ::
+Remove one variable
+
+.. code-block:: javascript
 
     pm.globals.unset('myVariable');
 
-Remove ALL global variables (rather unusual) ::
+Remove ALL global variables (rather unusual)
+
+.. code-block:: javascript
 
     pm.globals.clear();
 
@@ -64,15 +72,21 @@ Collection variables
 - good alternative to global variables or environment variables
 - for URLs / authentication credentials if only one environment exists
 
-**Setting** ::
+**Setting**
+
+.. code-block:: javascript
 
     pm.collectionVariables.set('myVariable', MY_VALUE);
 
-**Getting** ::
+**Getting**
+
+.. code-block:: javascript
 
     pm.collectionVariables.get('myVariable');
 
-**Removing** ::
+**Removing**
+
+.. code-block:: javascript
 
     pm.collectionVariables.unset('myVariable');
 
@@ -88,29 +102,39 @@ Environment variables are tied to the selected environment. Good alternative to 
 - URLs, authentication credentials
 - passing data to other requests
 
-**Setting** ::
+**Setting**
+
+.. code-block:: javascript
 
     pm.environment.set('myVariable', MY_VALUE);
 
-**Getting** ::
+**Getting**
 
     pm.environment.get('myVariable');
 
-Depending on the closest scope: ::
+Depending on the closest scope:
+
+.. code-block:: javascript
 
     pm.variables.get('myVariable');
 
 **Removing**
 
-Remove one variable ::
+Remove one variable
+
+.. code-block:: javascript
 
     pm.environment.unset("myVariable");
 
-Remove ALL environment variables ::
+Remove ALL environment variables
+
+.. code-block:: javascript
 
     pm.environment.clear();
 
-**Examples**: ::
+**Examples**:
+
+.. code-block:: javascript
 
     pm.environment.set('name', 'John Doe');
     console.log(pm.environment.get('name'));
@@ -137,11 +161,15 @@ Exist only during the execution of an iteration (created by the Collection Runne
 
 Can only be set from a CSV or a JSON file.
 
-**Getting** ::
+**Getting**
+
+.. code-block:: javascript
 
     pm.iterationData.get('myVariable);
 
-Depending on the closest scope: ::
+Depending on the closest scope:
+
+.. code-block:: javascript
 
     pm.variables.get('myVariable');
 
@@ -158,11 +186,15 @@ Local variables are only available withing the request that has set them or when
 
 - whenever you would like to override all other variable scopes — for whatever reason. Not sure though then this is needed.
 
-**Setting** ::
+**Setting**
+
+.. code-block:: javascript
 
     pm.variables.set('myVariable', MY_VALUE);
 
-**Getting** ::
+**Getting**
+
+.. code-block:: javascript
 
     pm.variables.get('myVariable', MY_VALUE);
 
@@ -192,7 +224,9 @@ Logging / Debugging variables
 
 Open Postman Console and use `console.log` in your test or pre-request script.
 
-Example: ::
+Example:
+
+.. code-block:: json
 
     var myVar = pm.globals.get("myVar");
     console.log(myVar);
@@ -202,7 +236,9 @@ Assertions
 
 Note: You need to add any of the assertions inside a ``pm.test`` callback.
 
-Example: ::
+Example:
+
+.. code-block:: json
 
     pm.test("Your test name", function () {
         var jsonData = pm.response.json();
